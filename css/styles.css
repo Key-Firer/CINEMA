@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  color: white;
+}
+header {
+  background-color: #b30000;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  height: 50px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+section {
+  padding: 20px;
+}
+h2 {
+  color: #b30000;
+}
+.peliculas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.pelicula {
+  background-color: #2c2c2c;
+  padding: 10px;
+  border-radius: 8px;
+  width: 200px;
+}
+footer {
+  background-color: #b30000;
+  text-align: center;
+  padding: 10px;
+}
