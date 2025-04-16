@@ -1,0 +1,44 @@
+Algoritmo LoginDeAcceso
+    // Definir las credenciales correctas
+    Definir usuario_correcto, clave_correcta Como Caracter
+    usuario_correcto <- "admin"
+    clave_correcta <- "1234"
+    
+    // Variables para intentos
+    Definir intentos_maximos, intentos Como Entero
+    intentos_maximos <- 3
+    intentos <- 0
+    
+    // Variables para entrada de usuario
+    Definir usuario_ingresado, clave_ingresada Como Caracter
+    Definir acceso_concedido Como Logico
+    acceso_concedido <- Falso
+    
+    Repetir
+        // Solicitar credenciales al usuario
+        Escribir "=== LOGIN DE ACCESO ==="
+        Escribir "Intento ", intentos+1, " de ", intentos_maximos
+        Escribir "Ingrese su usuario: "
+        Leer usuario_ingresado
+        Escribir "Ingrese su clave: "
+        Leer clave_ingresada
+        
+        // Verificar credenciales
+        Si usuario_ingresado == usuario_correcto Y clave_ingresada == clave_correcta Entonces
+            acceso_concedido <- Verdadero
+            Escribir "¡Acceso concedido! Bienvenido, ", usuario_ingresado
+        Sino
+            intentos <- intentos + 1
+            Escribir "Credenciales incorrectas. Intento ", intentos, " de ", intentos_maximos
+            
+            Si intentos < intentos_maximos Entonces
+                Escribir "Por favor intente nuevamente."
+            Sino
+                Escribir "Ha agotado todos sus intentos. Acceso denegado."
+            FinSi
+        FinSi
+        
+        Escribir "" // Espacio en blanco para mejor legibilidad
+    Hasta Que acceso_concedido O intentos >= intentos_maximos
+    
+FinAlgoritmo
